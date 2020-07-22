@@ -17,7 +17,18 @@ const romanToInt = (input)=>{
         if(arr[i+1]==='L'){output += 40;}
         else if (arr[i+1]==='C'){output += 90;}
         else{output += 10;}
-      break; 
+        break; 
+      case 'L':
+        output +=50;
+        break; 
+      case'C':
+        if(arr[i+1]==='D'){output += 400;}
+        else if (arr[i+1]==='M'){output += 900;}
+        else{output += 100;}
+        break; 
+      case 'D':
+        output +=500;
+        break;     
       default:
         total += 1000;
         break;  
