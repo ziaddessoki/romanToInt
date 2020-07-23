@@ -36,4 +36,21 @@ const romanToInt = (input)=>{
  }return output;
 }
 
-romanToInt('XXXIII')
+const romanToInt2 = (input)=>{
+  let map = {
+    "I":1,
+    "V":5,
+    "X":10,
+    "L":50,
+    "C":100,
+    "D":500,
+    "M":1000
+  };
+  let total = 0;
+  for(let i =0;i<input.length;i++){
+    map[input[i]]< map[input[i+1]]? total-=map[input[i]] : total+=map[input[i]]
+  }
+  return total;
+}
+
+romanToInt2("XI")
